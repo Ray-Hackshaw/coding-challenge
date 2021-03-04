@@ -6,8 +6,8 @@ const calculations = require('./calculation');
 const fs = require('fs');
 const data = JSON.parse(fs.readFileSync('data.json'));
 
-const rev_value = calculations.calc_rev();
-const exp_value = calculations.calc_exp();
+const rev_value = calculations.calc_rev(data.data);
+const exp_value = calculations.calc_exp(data.data);
 const gpm_value = calculations.calc_npm();
 const npm_value = calculations.calc_npm();
 const wcr_value = calculations.calc_wcr();
