@@ -17,7 +17,7 @@ function calc_exp(accounts){
     for (let account of exp_array){
         total_exp += account.total_value;
     }
-    return total_exp;
+    return total_exp
 }
 
 function calc_gpm(accounts, rev_value){
@@ -27,7 +27,7 @@ function calc_gpm(accounts, rev_value){
         total_gp += account.total_value;
     }
     const gpm_value = (total_gp / rev_value) * 100;
-    return gpm_value;
+    return gpm_value
 }
 
 function calc_npm(rev_value, exp_value){
