@@ -36,8 +36,18 @@ function calc_npm(rev_value, exp_value){
     return npm_value
 }
 
-function calc_wcr(){
-    return null
+function calc_wcr(accounts){
+    // Filters and calculations
+    const assets_debit;
+    const assets_credit;
+    const assets = assets_debit - assets_credit;
+    // Filters and calculations
+    const liabilities_debit;
+    const liabilities_credit;
+    const liabilities = liabilities_debit - liabilities_credit;
+    // Return working capital ratio % value 
+    const wcr_value = (assets / liabilities) * 100;
+    return wcr_value;
 }
 
 module.exports = {
