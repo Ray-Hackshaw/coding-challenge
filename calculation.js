@@ -1,6 +1,15 @@
 #!/usr/bin/env node
 
 // Functions and calculations for all 5 values will go here:
+/* To do list (for tomorrow):
+*   Polish WCR function - find a way to clean up long/reused code segments.
+*   Global function for account.total_value totalling - often reused.
+*   Code comments/documentation for each function.
+*   Formatting output correctly for each unit (currency and percentage values).
+*   Implement unit test framework.
+*   Implement some basic unit tests.
+*   Final check-through of application and push all changes to repo.
+*/
 
 function calc_rev(accounts){
     const rev_array = accounts.filter(account => account.account_category === 'revenue')
