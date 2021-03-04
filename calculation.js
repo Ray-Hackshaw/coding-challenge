@@ -42,9 +42,9 @@ function calc_wcr(accounts){
     const assets_credit;
     const assets = assets_debit - assets_credit;
     // Filters and calculations
-    const liabilities_debit;
-    const liabilities_credit;
-    const liabilities = liabilities_debit - liabilities_credit;
+    const liab_debit;
+    const liab_credit;
+    const liabilities = liab_debit - liab_credit;
     // Return working capital ratio % value 
     const wcr_value = (assets / liabilities) * 100;
     return wcr_value;
