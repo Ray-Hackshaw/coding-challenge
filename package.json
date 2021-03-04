@@ -4,6 +4,7 @@
   "description": "Coding Challenge for 9Spokes.",
   "main": "index.js",
   "scripts": {
+    "start": "node index.js",
     "test": "run tests"
   },
   "repository": {
