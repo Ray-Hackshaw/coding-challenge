@@ -20,8 +20,14 @@ function calc_exp(accounts){
     return total_exp;
 }
 
-function calc_gpm(){
-    return null
+function calc_gpm(accounts, rev_value){
+    const debit_sales = accounts.filter(account => account.account_type === 'sales' && account.value_type === 'debit');
+    let total_gp = 0;
+    for (let account of debit_sales){
+        total_gp += account.total_value;
+    }
+    const gpm_value = (total_gp / rev_value) * 100;
+    return gpm_value;
 }
 
 function calc_npm(){

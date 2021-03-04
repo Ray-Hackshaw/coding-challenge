@@ -8,7 +8,7 @@ const data = JSON.parse(fs.readFileSync('data.json'));
 
 const rev_value = calculations.calc_rev(data.data);
 const exp_value = calculations.calc_exp(data.data);
-const gpm_value = calculations.calc_npm();
+const gpm_value = calculations.calc_gpm(data.data, rev_value);
 const npm_value = calculations.calc_npm();
 const wcr_value = calculations.calc_wcr();
 
