@@ -1,5 +1,7 @@
 # Ray Hackshaw - Coding Challenge Response
 
+Commands `node index.js` or `npm start` can be used within the project directory to run the application.
+
 For the purposes of readability, the 5 common accounting metric values that are used with calculations are given the following three letter naming convention:
 Revenue -> rev
 Expenses -> exp

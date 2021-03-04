@@ -30,8 +30,10 @@ function calc_gpm(accounts, rev_value){
     return gpm_value;
 }
 
-function calc_npm(){
-    return null
+function calc_npm(rev_value, exp_value){
+    const total_np = rev_value - exp_value;
+    const npm_value = (total_np / rev_value) * 100;
+    return npm_value
 }
 
 function calc_wcr(){
