@@ -1,5 +1,12 @@
 # Ray Hackshaw - Coding Challenge Response
 
+For the purposes of readability, the 5 common accounting metric values that are used with calculations are given the following three letter naming convention:
+Revenue -> rev
+Expenses -> exp
+Gross Profit Margin -> gpm
+Net Profit Margin -> npm
+Working Capital Ratio -> wcr
+
 # 9Spokes Coding Challenge
 
 ## Overview
