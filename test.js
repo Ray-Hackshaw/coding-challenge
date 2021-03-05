@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 // Test file for Coding Challenge - Ray Hackshaw / March 2021
 
 const assert = require('chai').assert;

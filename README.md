@@ -2,14 +2,16 @@
 
 Commands `node index.js` or `npm start` can be used within the project directory to run the application.
 Mocha and Chai were used for unit tests - both were installed as dev-dependencies.
-After running `npm install`, the tests should be able to be run by using `npm run test` or `npm test`
+After running `npm install`, the tests should be able to be run by using `npm run test` or `npm test`.
 
-For the purposes of readability, the 5 accounting metric values that are used with calculations commonly adhere to the following three letter naming convention:
+For the purposes of readability, the 5 accounting metric values that are used with calculations commonly adhere to the following three-letter naming convention:
 Revenue -> 'rev'
 Expenses -> 'exp'
 Gross Profit Margin -> 'gpm'
 Net Profit Margin -> 'npm'
 Working Capital Ratio -> 'wcr'
+
+Built and tested in Node v12.16.3, Mocha v8.3.0, Chai v4.3.3.
 
 # 9Spokes Coding Challenge
 
