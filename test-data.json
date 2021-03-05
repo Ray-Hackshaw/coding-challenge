@@ -55,7 +55,43 @@
             "account_name": "Sales",
             "account_type": "sales",
             "total_value": 5
+        },
+        {
+            "account_category": "assets",
+            "value_type": "debit",
+            "account_name": "",
+            "account_type": "bank",
+            "total_value": 20
+        },
+        {
+            "account_category": "assets",
+            "value_type": "credit",
+            "account_name": "",
+            "account_type": "bank",
+            "total_value": 5
+        },
+        {
+            "account_category": "liability",
+            "value_type": "credit",
+            "account_name": "",
+            "account_type": "current",
+            "total_value": 5
+        },
+        {
+            "account_category": "liability",
+            "value_type": "debit",
+            "account_name": "",
+            "account_type": "current",
+            "total_value": 10
+        },
+        {
+            "account_category": "assets",
+            "value_type": "credit",
+            "account_name": "Sales",
+            "account_type": "sales",
+            "total_value": 5
         }
+
     ]
 }
 

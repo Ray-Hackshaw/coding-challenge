@@ -24,7 +24,6 @@ describe('Expenses', function(){
 });
 
 // Gross Profit Margin tests
-
 describe('Gross Profit Margin', function(){
     it("empty input - no matching accounts", function(){
         assert.equal(calc.calc_gpm([], 5), 0)
@@ -35,7 +34,6 @@ describe('Gross Profit Margin', function(){
 })
 
 // Net Profit Margin tests
-
 describe('Net Profit Margin', function(){
     it("expenses and revenue set to 0", function(){
         assert.equal(isNaN(calc.calc_npm(0, 0)), true)
@@ -51,7 +49,16 @@ describe('Net Profit Margin', function(){
     });
 })
 
-// // // Working Capital Ratio tests
+// Working Capital Ratio tests
+describe('Working Capital Ratio', function(){
+    it("empty set - assets and liabilities are both zero", function(){
+        assert.equal(isNaN(calc.calc_wcr([])), true)
+    });
+    it("assets are zero - no assets present", function(){
+        assert.equal(calc.calc_wcr([data.data[10], data.data[11]]), 0)
+    });
+    it("liabilities are zero - no liabilities present", function(){
+        assert.equal(calc.calc_wcr([data.data[8], data.data[9]]), Infinity)
+    });
 
-// describe('Working Capital Ratio', function(){
-// })
+})
