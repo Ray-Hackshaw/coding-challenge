@@ -5,7 +5,7 @@
 const calculations = require('./calculation');
 const fs = require('fs');
 const data = JSON.parse(fs.readFileSync('data.json'));
-console.log(data.data)
+
 const rev_value = calculations.calc_rev(data.data);
 const exp_value = calculations.calc_exp(data.data);
 const gpm_value = calculations.calc_gpm(data.data, rev_value);

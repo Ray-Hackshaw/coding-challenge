@@ -34,10 +34,22 @@ describe('Gross Profit Margin', function(){
     });
 })
 
-// // // Net Profit Margin tests
+// Net Profit Margin tests
 
-// describe('Net Profit Margin', function(){
-// })
+describe('Net Profit Margin', function(){
+    it("expenses and revenue set to 0", function(){
+        assert.equal(isNaN(calc.calc_npm(0, 0)), true)
+    });
+    it("zero division - revenue value is zero", function(){
+        assert.equal(calc.calc_npm(0, 5), -Infinity) 
+    });
+    it("negative net profit margin", function(){
+        assert.isBelow(calc.calc_npm(1, 5), 0) 
+    });
+    it("positive net profit margin", function(){
+        assert.isAbove(calc.calc_npm(5, 1), 0)
+    });
+})
 
 // // // Working Capital Ratio tests
 
