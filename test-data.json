@@ -1,0 +1,65 @@
+{   
+    "data": [
+        {
+            "account_category": "revenue",
+            "value_type": "credit",
+            "account_name": "Sales",
+            "account_type": "sales",
+            "total_value": 5
+        },
+        {
+            "account_category": "expense",
+            "value_type": "credit",
+            "account_name": "Sales",
+            "account_type": "sales",
+            "total_value": 5
+        },
+        {
+            "account_category": "revenue",
+            "value_type": "credit",
+            "account_name": "Sales",
+            "account_type": "sales",
+            "total_value": 5
+        },
+        {
+            "account_category": "revenue",
+            "value_type": "credit",
+            "account_name": "Sales",
+            "account_type": "sales",
+            "total_value": 5
+        },
+        {
+            "account_category": "expense",
+            "value_type": "credit",
+            "account_name": "Sales",
+            "account_type": "sales",
+            "total_value": 5
+        },
+        {
+            "account_category": "expense",
+            "value_type": "credit",
+            "account_name": "Sales",
+            "account_type": "sales",
+            "total_value": 5
+        },
+        {
+            "account_category": "expense",
+            "value_type": "credit",
+            "account_name": "Sales",
+            "account_type": "sales",
+            "total_value": 5
+        },
+        {
+            "account_category": "",
+            "value_type": "credit",
+            "account_name": "Sales",
+            "account_type": "sales",
+            "total_value": 5
+        }
+    ]
+}
+
+
+
+
+        
