@@ -1,13 +1,15 @@
 # Ray Hackshaw - Coding Challenge Response
 
 Commands `node index.js` or `npm start` can be used within the project directory to run the application.
+Mocha and Chai were used for unit tests - both were installed as dev-dependencies.
+After running `npm install`, the tests should be able to be run by using `npm run test` or `npm test`
 
-For the purposes of readability, the 5 common accounting metric values that are used with calculations are given the following three letter naming convention:
-Revenue -> rev
-Expenses -> exp
-Gross Profit Margin -> gpm
-Net Profit Margin -> npm
-Working Capital Ratio -> wcr
+For the purposes of readability, the 5 accounting metric values that are used with calculations commonly adhere to the following three letter naming convention:
+Revenue -> 'rev'
+Expenses -> 'exp'
+Gross Profit Margin -> 'gpm'
+Net Profit Margin -> 'npm'
+Working Capital Ratio -> 'wcr'
 
 # 9Spokes Coding Challenge
 

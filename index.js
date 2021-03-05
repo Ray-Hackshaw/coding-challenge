@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 
-// Main console.logs and function calls will go here:
+// Main file for Coding Challenge - Ray Hackshaw / March 2021
 
 const calculations = require('./calculation');
 const fs = require('fs');
