@@ -11,6 +11,21 @@
 *   Final check-through of application and push all changes to repo.
 */
 
+// function currency_format(currency){
+//     return currency.toLocaleString('en-NZD', {
+//         style: 'currency',
+//         currency: 'NZD',
+//         maximumFractionDigits: 0
+//     })
+// }
+
+// function percent_format(percentage){
+//     return percentage.toLocaleString('en-NZD', {
+//         style: 'percentage',
+//         maximumFractionDigits: 0
+//     })
+// }
+
 function calc_total(accounts_array){
     let total_sum = 0;
     for (let account of accounts_array){
