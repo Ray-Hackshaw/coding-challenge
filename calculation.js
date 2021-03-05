@@ -54,24 +54,23 @@ function calc_npm(rev_value, exp_value){
 }
 
 function calc_wcr(accounts){
-    const debit_assets_filter = accounts.filter(account => account.account_category === 'assets' && account.value_type === 'debit');
-    const debit_assets_arr = debit_assets_filter.filter(asset => asset.account_type === 'current' || asset.account_type === 'bank' || asset.account_type === 'current_accounts_receivable');
-    const assets_debit = calc_total(debit_assets_arr);
+    const assets_array = accounts.filter(account => account.account_type === 'current' || account.account_type === 'bank' || account.account_type === 'current_accounts_receivable');
+    
+    const debit_assets_array = assets_array.filter(asset => asset.account_category === 'assets' && asset.value_type === 'debit');
+    const debit_assets_value = calc_total(debit_assets_array);
+    const credit_assets_array = assets_array.filter(asset => asset.account_category === 'assets' && asset.value_type === 'credit');
+    const credit_assets_value = calc_total(credit_assets_array);
 
-    const credit_assets_filter = accounts.filter(account => account.account_category === 'assets' && account.value_type === 'credit');
-    const credit_assets_arr = credit_assets_filter.filter(asset => asset.account_type === 'current' || asset.account_type === 'bank' || asset.account_type === 'current_accounts_receivable');
-    const assets_credit = calc_total(credit_assets_arr);
+    const assets = debit_assets_value - credit_assets_value;
 
-    const debit_liab_filter = accounts.filter(account => account.account_category === 'liability' && account.value_type === 'debit');
-    const debit_liab_arr = debit_liab_filter.filter(asset => asset.account_type === 'current' || asset.account_type === 'current_accounts_payable');
-    const liab_debit = calc_total(debit_liab_arr);
+    const liab_array = accounts.filter(asset => asset.account_type === 'current' || asset.account_type === 'current_accounts_payable');
+    
+    const debit_liab_array = liab_array.filter(account => account.account_category === 'liability' && account.value_type === 'debit');
+    const debit_liab_value = calc_total(debit_liab_array);
+    const credit_liab_array = liab_array.filter(account => account.account_category === 'liability' && account.value_type === 'credit');
+    const credit_liab_value = calc_total(credit_liab_array);
 
-    const credit_liab_filter = accounts.filter(account => account.account_category === 'liability' && account.value_type === 'credit');
-    const credit_liab_arr = credit_liab_filter.filter(asset => asset.account_type === 'current' || asset.account_type === 'current_accounts_payable');
-    const liab_credit = calc_total(credit_liab_arr);
-
-    const assets = assets_debit - assets_credit;
-    const liabilities = liab_debit - liab_credit;
+    const liabilities = debit_liab_value - credit_liab_value;
 
     const wcr_value = (assets / liabilities) * 100;
     return wcr_value;
