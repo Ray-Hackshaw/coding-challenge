@@ -51,7 +51,7 @@
         },
         {
             "account_category": "",
-            "value_type": "credit",
+            "value_type": "debit",
             "account_name": "Sales",
             "account_type": "sales",
             "total_value": 5
