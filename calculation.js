@@ -2,8 +2,8 @@
 
 // Functions and calculations for all 5 values will go here:
 /* To do list (for tomorrow):
-*   Polish WCR function - find a way to clean up long/reused code segments.
-*   Global function for account.total_value totalling - often reused.
+*   [DONE] Polish WCR function - find a way to clean up long/reused code segments.
+*   [DONE] Global function for account.total_value totalling - often reused.
 *   Code comments/documentation for each function.
 *   Formatting output correctly for each unit (currency and percentage values).
 *   Implement unit test framework.
@@ -21,28 +21,19 @@ function calc_total(accounts_array){
 
 function calc_rev(accounts){
     const rev_array = accounts.filter(account => account.account_category === 'revenue')
-    let total_rev = 0;
-    for (let account of rev_array){
-        total_rev += account.total_value;
-    }
+    const total_rev = calc_total(rev_array);
     return total_rev
 }
 
 function calc_exp(accounts){
     const exp_array = accounts.filter(account => account.account_category === 'expense')
-    let total_exp = 0;
-    for (let account of exp_array){
-        total_exp += account.total_value;
-    }
+    const total_exp = calc_total(exp_array);
     return total_exp
 }
 
 function calc_gpm(accounts, rev_value){
     const debit_sales = accounts.filter(account => account.account_type === 'sales' && account.value_type === 'debit');
-    let total_gp = 0;
-    for (let account of debit_sales){
-        total_gp += account.total_value;
-    }
+    const total_gp = calc_total(debit_sales);
     const gpm_value = (total_gp / rev_value) * 100;
     return gpm_value
 }
